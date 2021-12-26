@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif; ;
+    min-height: 100vh;
+    background-color: hsl(233, 47%, 7%);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+
+.container {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    background-color: hsl(244, 38%, 16%);
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+    border-radius: 15px;
+    overflow: hidden;
+    margin: 2rem;
+}
+
+.txt-content  {
+    padding: 10%;
+}
+
+.txt-content .title {
+    padding-bottom: 2rem;
+    color: hsl(0, 0%, 100%);
+}
+
+.txt-content .subtitle {
+    color: hsla(0, 0%, 100%, 0.75);
+    line-height: 1.8;
+    padding-bottom: 0.5rem;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5rem;
+}
+
+.stats h1 {
+    color: hsla(0, 0%, 100%, 0.6);
+}
+
+.stats p {
+    padding-top: 6px;
+    font-family: 'Lexend Deca', sans-serif;
+    font-weight: 200;
+    letter-spacing: 2px;
+    font-size: 14px;
+}
+
+span {
+    color: hsl(277, 64%, 61%);
+}
+
+.right-section img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.right-section {
+    position: relative;
+}
+
+.right-section::after {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    left: 0;
+    top: 0;
+    background-color: hsl(277, 64%, 61%, 0.4);
+
+}
+
+@media only screen and (max-width: 850px) and (min-width: 426px) {
+    body {
+        font-size: 12px;
+    }
+
+    .txt-content {
+        padding: 12%;
+    }
+
+    .stats h1 {
+        font-size: 20px;
+    }
+
+    .stats p {
+        font-size: 11px;
+    }
+}
+
+@media only screen and (max-width: 425px) {
+    body {
+        text-align: center;
+        font-size: 16px;
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .right-section {
+        order: -1;
+    }
+
+    .stats {
+        flex-direction: column;
+
+    }
+
+    .stats div {
+        margin-top: 26px;
+    }
+
+    .txt-content .title {
+        font-size: 29px;
+    }
+
+}
